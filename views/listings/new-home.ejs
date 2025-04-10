@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Toggle</title>
+    <link rel="stylesheet" href="/css/style-new-home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <a href="/home %>">logo</a>
+      </div>
+      <div class="menu">
+        <div class="search-container">
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input type="text" placeholder="Search..." class="search-input" />
+        </div>
+        <div class="language-selector">
+          <i class="fas fa-language"></i>
+          <select>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <div class="help-section">
+          <div class="help"><i class="fas fa-question-circle"></i> Help</div>
+        </div>
+        <div class="login-section">
+          <div class="login">
+            <a href="/home/login %>"><i class="fas fa-user"></i> Sign-in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <!-- <div class="name">name</div> -->
+      <div class="container">
+        <div class="scheme-ad">
+          <h1>Scheme</h1>
+          <p>scheme scheme scheme scheme scheme</p>
+          <div class="verification-container">
+            <a href="/home/listings %>"
+              ><h3>Find Your Scheme</h3>
+              <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="search">
+            <input type="text" placeholder="Search here..." />
+            <button type="button">Search</button>
+        </div> -->
+      <div class="features">
+        <div class="recommendations">
+          <div class="features-title">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>AI Recommendations</h3>
+          </div>
+          <div class="features-container">
+            <% for(let listing of allListings) { %>
+            <a href="/listings/<%= listing._id %>">
+              <div class="features-card">
+                <div class="feature-content">
+                  <img
+                    src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  />
+                  <div class="card-info">
+                    <h3><%= listing.title %></h3>
+                    <p><%= listing.department %></p>
+                  </div>
+                </div>
+                <button>
+                  <a href="/home/eligibility %>">Check Eligibility</a>
+                </button>
+              </div>
+            </a>
+            <% } %>
+          </div>
+        </div>
+      </div>
+
+      <div class="suggestions">
+        <div class="recommendations">
+          <div class="scheme-selector">
+            <i class="fas fa-list-alt"></i>
+            <select>
+              <option value="en">Categories</option>
+              <option value="es">States/UTs</option>
+              <option value="fr">Central Ministries</option>
+            </select>
+          </div>
+          <div class="features-container">
+            <% for(let listing of allListings) { %>
+            <a href="/listings/<%= listing._id %>">
+              <div class="state-container">
+                <div class="flex-container">
+                  <div class="image-wrapper">
+                    <img
+                      alt="Karnataka"
+                      title="Karnataka"
+                      src="https://e7.pngegg.com/pngimages/408/217/png-clipart-public-administration-business-administration-organization-gestion-paraestatalidad-concierto-text-trademark-thumbnail.png"
+                      class="state-image"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="state-info">
+                    <h2 class="state-title"><%= listing.department %></h2>
+
+                    <div class="state-numbers">
+                      <span class="state-number">
+                        <span class="number">59</span>
+                        <span class="label">State</span>
+                      </span>
+
+                      <span class="state-number">
+                        <span class="number">506</span>
+                        <span class="label">Central</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cloud cloud-small"></div>
+    <div class="cloud cloud-medium"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-large"></div>
+
+    <div class="sun-moon" id="sunMoon"></div>
+
+    <button class="button" id="toggleButton">🌙 Dark Mode</button>
+
+    <script>
+      const toggleButton = document.getElementById("toggleButton");
+      const body = document.body;
+      const sunMoon = document.getElementById("sunMoon");
+
+      toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          toggleButton.textContent = "☀️ Light Mode";
+          if (!sunMoon.querySelector(".moon-shadow")) {
+            const shadow = document.createElement("div");
+            shadow.classList.add("moon-shadow");
+            sunMoon.appendChild(shadow);
+          }
+        } else {
+          toggleButton.textContent = "🌙 Dark Mode";
+          const shadow = sunMoon.querySelector(".moon-shadow");
+          if (shadow) shadow.remove();
+        }
+      });
+    </script>
+  </body>
+</html>

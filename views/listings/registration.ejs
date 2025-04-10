@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style-registration.css">
+</head>
+<body>
+    <div class="container">
+      <div class="button-group">
+        <button class="control-button" id="close-btn">X</button>
+    </div>
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                    <small class="error-message" id="nameError"></small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <div class="input-icon">
+                    <i class="fa fa-phone"></i>
+                    <input type="text" id="mobile" placeholder="Enter your mobile number" required>
+                    <small class="error-message" id="mobileError"></small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <div class="input-icon">
+                    <i class="fa fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                    <small class="error-message" id="emailError"></small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="OTP">OTP</label>
+                <div class="input-icon">
+                    <i class="fa fa-id-card"></i>
+                    <input type="text" id="aadhaar" placeholder="Enter OTP ">
+                </div>
+            </div>
+
+            <div class="form-group">
+              <label for="Password">Password</label>
+              <div class="input-icon">
+                  <i class="fa fa-id-card"></i>
+                  <input type="text" id="Password" placeholder="Enter Password ">
+              </div>
+          </div>
+
+
+        <div class="form-group">  
+          <label for="Password">ConfirmPassword</label>
+          <div class="input-icon">
+              <i class="fa fa-id-card"></i>
+              <input type="text" id="confPassword" placeholder="Confirm  Password ">
+          </div>
+      </div>
+
+            <button type="submit" class="btn"><a href="/home/login %>">Sign Up</a></button>
+        </form>
+       
+        <div class="language-selector">
+            <label for="language">Language: </label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </div>
+  </div>
+
+    <script>
+       const closeBtn = document.getElementById('close-btn');
+       let isclose = false;
+
+       closeBtn.addEventListener('click', () => {
+        isclose = !isclose;
+        if(isclose){
+            container.style.display = 'none';
+        }else{
+            container.style.display = 'block';
+        }
+       });
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            // Validation flags
+            let isValid = true;
+
+            // Name validation
+            const name = document.getElementById('name').value;
+            const nameError = document.getElementById('nameError');
+            if (!/^[a-zA-Z0-9.-]+$/.test(name)) {
+                nameError.textContent = 'Can only contain letters,numbers,".","-","_"'
+                isValid = false;
+            } else {
+                nameError.textContent = '';
+            }
+
+            // Mobile number validation
+            const mobile = document.getElementById('mobile').value;
+            const mobileError = document.getElementById('mobileError');
+            if (!/^[0-9]{10}$/.test(mobile)) {
+                mobileError.textContent = 'Mobile number must be exactly 10 digits';
+                isValid = false;
+            } else {
+                mobileError.textContent = '';
+            }
+
+            // Email validation
+            const email = document.getElementById('email').value;
+            const emailError = document.getElementById('emailError');
+            if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+                emailError.textContent = 'Invalid email address';
+                isValid = false;
+            } else {
+                emailError.textContent = '';
+            }
+
+            // If all fields are valid, submit the form (or perform desired action)
+            if (isValid) {
+                alert('Form submitted successfully!');
+                // Uncomment the next line to actually submit the form
+                // this.submit();
+            }
+
+        });
+        
+
+    </script>
+</body>
+</html>

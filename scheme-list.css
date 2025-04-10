@@ -1,0 +1,563 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.5s;
+  overflow: hidden;
+  background-color: #cfe0fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  background-color: yellow;
+  padding: 1rem;
+  position: fixed;
+  top: 20px;
+  padding: 8px 16px;
+  border: none;
+  left: 20px;
+  z-index: 1000;
+}
+.scheme-section {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1000;
+  right: 1rem;
+}
+.scheme {
+  position: fixed;
+  top: 20px;
+  left: 7rem;
+  padding: 0.5rem 1rem;
+  border: 0px solid black;
+  border-radius: 5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.scheme:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  position: fixed;
+  top: 25px;
+  right: 25rem;
+  padding: 0rem;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  z-index: 1000;
+}
+.language-selector i {
+  font-size: 2.2rem;
+  z-index: 1000;
+}
+.language-selector select {
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: transparent;
+  z-index: 1000;
+}
+.help-section {
+  position: fixed;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.5rem;
+  right: 13rem;
+  padding: 0rem;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 0px;
+  background-color: white;
+  z-index: 1000;
+}
+.help {
+  padding: 0.5rem 1rem;
+  right: 18rem;
+  position: fixed;
+  top: 20px;
+  border: 0px solid black;
+  border-radius: 5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  z-index: 1000;
+}
+.help:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+.login-section {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+
+  right: 1rem;
+}
+.login {
+  position: fixed;
+  top: 20px;
+  right: 10rem;
+  padding: 0.5rem 1rem;
+  border: 0px solid black;
+  border-radius: 5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  z-index: 1000;
+}
+.login:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+
+.search-container {
+  /* background-color: #0056b3; */
+  /* height: 20rem; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-right: 2px solid rgba(13, 110, 253, 0.8);
+  /* left: 20rem; */
+  /* position: fixed; */
+  /* z-index: 1000; */
+
+  /* position: relative;
+    top: 50%; */
+  /* align-items: center; */
+}
+.search {
+  background-color: white;
+  position: relative;
+  align-self: left;
+  height: 8vh;
+  /* transform: translate(-50%, -50%); */
+  /* height: 10vh; */
+  /* background-color: white; */
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  /* z-index: 1000; */
+  display: flex;
+  align-items: left;
+  gap: 0.5rem;
+  /* left: 10rem; */
+  /* z-index: 1000; */
+}
+
+.search input {
+  width: 675px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  top: 20px;
+  right: 10rem;
+  z-index: 1000;
+}
+
+.search-btn {
+  /* background-color: #3498db; */
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* color: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.search-btn i {
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.search-btn:hover {
+  background-color: white;
+  z-index: 1000;
+}
+
+.partition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 100;
+  opacity: 100;
+}
+.dark-mode {
+  background-color: #1a1a1a;
+  color: white;
+}
+.dark-mode .help,
+.dark-mode .login,
+.dark-mode label,
+.dark-mode .filter-option,
+.dark-mode button {
+  color: white; /* Ensure buttons, labels, and inputs have white text */
+}
+
+.dark-mode .search input {
+  background-color: #333; /* Darker background for inputs */
+  color: white; /* Input text in white */
+}
+
+.dark-mode .search-btn {
+  background-color: #444; /* Button background for dark mode */
+  color: white;
+}
+
+.dark-mode .chat-messages,
+.dark-mode .chat-input-area input,
+.dark-mode .chat-input-area button {
+  background-color: #333; /* Chat background */
+  color: rgb(7, 6, 6); /* Chat text in white */
+}
+
+.dark-mode .chat-input-area button:hover {
+  background-color: #555; /* Slightly brighter on hover */
+}
+
+.dark-mode select {
+  background-color: #444;
+  color: white;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(-500%);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 100px;
+  animation: drift 20s linear infinite;
+  opacity: 0.8;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 50px;
+  height: 50px;
+  top: -20px;
+  left: 10px;
+}
+
+.cloud::after {
+  width: 30px;
+  height: 30px;
+  top: -35px;
+  left: 40px;
+}
+
+.sun-moon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+  background-color: #ffc107;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.dark-mode .sun-moon {
+  background-color: #eee;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.moon-shadow {
+  width: 64px;
+  height: 64px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  pointer-events: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.button {
+  position: fixed;
+  top: 27px;
+  right: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 1000;
+}
+
+.dark-mode .button {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Cloud Styling */
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 100px;
+  opacity: 0.8;
+  animation: drift linear infinite;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cloud::before {
+  width: 50px;
+  height: 50px;
+  top: -20px;
+  left: 10px;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cloud::after {
+  width: 30px;
+  height: 30px;
+  top: -35px;
+  left: 40px;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Cloud Sizes */
+.cloud-small {
+  width: 80px;
+  height: 30px;
+  animation-duration: 10s;
+  top: 600px;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cloud-medium {
+  width: 120px;
+  height: 40px;
+  animation-duration: 20s;
+  top: 55000px;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cloud-large {
+  width: 150px;
+  height: 60px;
+  animation-duration: 30s;
+  top: 800px;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cloud:nth-child(1) {
+  top: 90%;
+  animation-duration: 15s;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cloud:nth-child(2) {
+  top: 60%;
+  animation-duration: 25s;
+  animation-delay: -5s;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.cloud-1 {
+  top: 10%;
+  animation-duration: 15s;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.cloud-2 {
+  top: 20%;
+  animation-duration: 25s;
+  animation-delay: -5s;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.cloud:nth-child(3) {
+  top: 80%;
+  animation-duration: 20s;
+  animation-delay: -10s;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Sun/Moon */
+.sun-moon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  top: 450px;
+  right: 50%;
+  cursor: pointer;
+  background: #ffc107;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.5s, box-shadow 0.5s;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.dark-mode .sun-moon {
+  background: #eee;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes drift {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+.content {
+  background-color: #cfe0fc;
+  /* margin: 5rem; */
+  height: 100vh;
+  width: 100%;
+  padding: 6rem 6rem 0 6rem;
+  display: flex;
+}
+.dark-mode .content {
+  background-color: #1a1a1a;
+}
+.side-bar {
+  padding: 0 1rem;
+  width: 25%;
+  border-right: 2px solid rgba(13, 110, 253, 0.8);
+}
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.35rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid rgba(13, 110, 253, 0.8);
+  margin-bottom: 0.5rem;
+}
+.filter-title {
+  display: flex;
+  flex-direction: row;
+}
+.funnel,
+.undo {
+  font-size: 1.15rem;
+}
+
+.main {
+  width: 75%;
+}
+.form-select {
+  border: none !important;
+  background-color: transparent !important;
+}
+.upper {
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+}
+.scheme-card {
+  padding: 1.5rem;
+  background-color: rgba(91, 154, 255, 0.25);
+  border-radius: 10px;
+  border: 2px solid rgba(13, 110, 253, 0.8);
+  margin: 0.5rem 1rem;
+}
+.scheme-card a {
+  text-decoration: none;
+  color: black;
+}
+.dark-mode .scheme-card a {
+  color: white;
+}
+.scheme-card:hover {
+  box-shadow: 0 0 10px rgba(13, 110, 253, 1);
+  transform: scale(1.01);
+}
+.main-list {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-list::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}

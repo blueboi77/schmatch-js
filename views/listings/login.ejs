@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/style-registration.css">
+</head>
+<body>
+    <div class="container">
+      <div class="button-group">
+        <button class="control-button" id="close-btn">X</button>
+    </div>
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name </label>
+                <div class="input-icon">
+                    <i class="fa fa-user"></i>
+                    <input type="text" id="name" placeholder="Enter your Name" required>
+                    <small class="error-message" id="nameError"></small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="mobile"> Email / Mobile Number</label>
+                <div class="input-icon">
+                    <i class="fa fa-phone"></i>
+                    <input type="text" id="mobile" placeholder="Enter your mobile number / Email" required>
+                    <small class="error-message" id="mobileError"></small>
+                </div>
+            </div>
+          
+           
+
+            <div class="form-group">s
+              <label for="Password">Password</label>
+              <div class="input-icon">
+                  <i class="fa fa-id-card"></i>
+                  <input type="text" id="Password" placeholder="Enter Password ">
+              </div>
+          </div>
+
+
+        
+
+            <button type="submit" class="btn"><a href="/home/eligibility %>">Login</a></button>
+        </form>
+        <div class="signup-option">
+            <p>Don't have an account? <a href="#login.html" id="signup-link" ><button><a href="/home/registration %>">Sign up</a></button></a></p>
+        </div>
+       
+        <div class="language-selector">
+            <label for="language">Language: </label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+            </select>
+        </div>
+    </div>
+  </div>
+  
+   
+</div>
+</body>
+</html>

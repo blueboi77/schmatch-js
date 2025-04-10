@@ -1,0 +1,340 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.5s;
+  overflow: hidden;
+  background-color: #a0faae;
+  display: flex;
+}
+.logo {
+  background-color: yellow;
+  padding: 0.5rem;
+}
+.scheme-section {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1000;
+  right: 1rem;
+  z-index: 1000;
+}
+.scheme {
+  position: fixed;
+  top: 20px;
+  left: 7rem;
+  padding: 0.5rem 1rem;
+  border: 0px solid black;
+  border-radius: 5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  z-index: 1000;
+}
+.scheme:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+.button {
+  position: fixed;
+  top: 27px;
+  right: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 50px;
+  background-color: white;
+  width: 300px;
+  /* height: 2.5rem; */
+  top: 20px;
+  right: 37rem;
+  position: fixed;
+  /* position: absolute;
+      right: 42rem; */
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-size: 16px;
+  height: 2.25rem;
+  width: 100%;
+  border-radius: 50px;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+}
+
+.search-btn {
+  /* background-color: #3498db; */
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* color: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-btn i {
+  font-size: 16px;
+}
+
+.search-btn:hover {
+  background-color: white;
+}
+.scrollspy-example {
+  background-color: #c5ffbd;
+  padding-top: 0.5rem;
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 15rem;
+}
+.scrollspy-example::-webkit-scrollbar {
+  display: none !important; /* For Chrome, Safari, and Opera */
+}
+.simple-list-example-scrollspy a.active {
+  background-color: #0d6efd;
+  color: white;
+}
+.simple-list-example-scrollspy a {
+  height: 3rem;
+  align-content: center;
+  text-decoration: none;
+}
+.header {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0.5rem 2rem;
+  position: top;
+  /* padding-right: 2rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+.hmenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 0.5rem;
+  /* padding: 0.5rem; */
+  /* margin: 1rem; */
+  width: 40vw;
+  
+
+  background-color: white;
+}
+.hoption {
+  transition: transform 0.1s, box-shadow 0.1s;
+  align-content: right;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+.hoption a{
+  text-decoration: none !important;
+  color: black !important;
+}
+.hoption:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+.content {
+  /* padding-top: 7rem; */
+  background-color: transparent;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  padding: 6rem;
+  /* overflow: auto; */
+}
+.row {
+  background-color: #c5ffbd !important;
+  padding-top: 7rem;
+  height: 100vh;
+  /* margin-top: 10rem; */
+}
+
+.result {
+  /* background-color: green; */
+  height: 100vh;
+  width: 25%;
+  /* padding-top: 1rem; */
+  padding-top: 7rem;
+  margin-left: 1rem;
+}
+
+.sub-title {
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(13, 110, 253, 0.8);
+}
+
+.state-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: min-content;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  width: max-content;
+  position: relative;
+  margin-right: 1rem;
+}
+.ai-box a {
+  text-decoration: none;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.state-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.state-container.dark {
+  background-color: #050016;
+}
+
+.image-wrapper {
+  margin-right: 1rem; /* Add some space between the image and state-info */
+}
+.image-wrapper img {
+  height: 75px;
+  width: auto;
+}
+.state-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  padding: 0.5rem 0;
+  flex-grow: 1;
+}
+
+.state-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d6a4f;
+  transition: color 0.5s ease-in-out;
+  margin: 0;
+}
+
+.state-container:hover .state-title {
+  color: #64c19e;
+}
+
+.state-numbers {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  gap: 1rem;
+}
+
+.state-number {
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number {
+  font-weight: 500;
+  color: #2d6a4f;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.state-container.dark .number {
+  color: #fff;
+}
+
+.state-container.dark .label {
+  color: #ccc;
+}
+.result-box {
+  padding: 1rem;
+  border-radius: 20px;
+  border: 2px solid rgba(13, 110, 253, 0.8);
+  background-color: rgba(91, 154, 255, 0.25);
+  /* box-shadow: 0 0 5px rgba(13, 110, 253, 1); */
+  justify-items: center;
+}
+.upper-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.upper-box button {
+  background-color: white;
+}
+.upper-box button i {
+  margin-right: 0.5rem;
+}
+.icon i {
+  color: rgba(13, 110, 253);
+  margin: 0 0.5rem;
+  font-size: 1.4rem;
+}
+.conclusion {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  background-color: red;
+  color: white;
+  font-size: 1.15rem;
+  /* box-shadow: 0 0 5px rgba(255, 0, 0, 5); */
+  border-radius: 10px;
+}
+.recommendation {
+  width: 100%;
+  padding: 1rem;
+  border-top: 2px solid rgba(13, 110, 253, 0.8);
+}
+.ai-box {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+}
+
+.ai-box::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.logo a {
+  text-decoration: none;
+}

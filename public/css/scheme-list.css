@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.5s;
+  overflow: hidden;
+  background-color: #a0faae;
+  display: flex;
+}
+.header {
+  background-color: white;
+  box-sizing: border-box;
+  padding: 0.5rem 2rem;
+  position: top;
+  /* padding-right: 2rem; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+}
+.hmenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 0.5rem;
+  /* padding: 0.5rem; */
+  /* margin: 1rem; */
+  width: 40vw;
+  
+
+  background-color: white;
+}
+.logo {
+  background-color: yellow;
+  padding: 0.5rem;
+}
+.hoption {
+  transition: transform 0.1s, box-shadow 0.1s;
+  align-content: right;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+.hoption a{
+  text-decoration: none !important;
+  color: black !important;
+}
+.hoption:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+.scheme-section {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 1000;
+  right: 1rem;
+}
+.scheme {
+  position: fixed;
+  top: 20px;
+  left: 7rem;
+  padding: 0.5rem 1rem;
+  border: 0px solid black;
+  border-radius: 5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.scheme:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  transform: scale(1.05);
+}
+.search-container {
+  /* background-color: #0056b3; */
+  /* height: 20rem; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  border-right: 2px solid rgba(13, 110, 253, 0.8);
+  /* left: 20rem; */
+  /* position: fixed; */
+  /* z-index: 1000; */
+
+  /* position: relative;
+      top: 50%; */
+  /* align-items: center; */
+}
+.search {
+  background-color: white;
+  position: relative;
+  align-self: left;
+  height: 8vh;
+  /* transform: translate(-50%, -50%); */
+  /* height: 10vh; */
+  /* background-color: white; */
+  padding: 0.75rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  /* z-index: 1000; */
+  display: flex;
+  align-items: left;
+  gap: 0.5rem;
+  /* left: 10rem; */
+  /* z-index: 1000; */
+}
+.search input {
+  width: 675px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  top: 20px;
+  right: 10rem;
+  z-index: 1000;
+}
+.search-btn {
+  /* background-color: #3498db; */
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* color: #fff; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.search-btn i {
+  font-size: 16px;
+  z-index: 1000;
+}
+.search-btn:hover {
+  background-color: white;
+  z-index: 1000;
+}
+.content {
+  background-color: #c5ffbd;
+  /* margin: 5rem; */
+  height: 100vh;
+  width: 100%;
+  padding: 6rem 6rem 0 6rem;
+  display: flex;
+}
+.side-bar {
+  padding: 0 1rem;
+  width: 25%;
+  border-right: 2px solid rgba(13, 110, 253, 0.8);
+}
+.filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.35rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 2px solid rgba(13, 110, 253, 0.8);
+  margin-bottom: 0.5rem;
+}
+.filter-title {
+  display: flex;
+  flex-direction: row;
+}
+.funnel,
+.undo {
+  font-size: 1.15rem;
+}
+.main {
+  width: 75%;
+}
+.form-select {
+  border: none !important;
+  background-color: transparent !important;
+}
+.upper {
+  display: flex;
+  margin-bottom: 0.5rem;
+  padding: 0 1rem;
+}
+.scheme-card {
+  padding: 1.5rem;
+  background-color: rgba(91, 154, 255, 0.25);
+  border-radius: 10px;
+  border: 2px solid rgba(13, 110, 253, 0.8);
+  margin: 0.5rem 1rem;
+}
+.scheme-card a {
+  text-decoration: none;
+  color: black;
+}
+.scheme-card p {
+  height: 4.5rem;
+  overflow: hidden;
+}
+.scheme-card:hover {
+  box-shadow: 0 0 10px rgba(13, 110, 253, 1);
+  transform: scale(1.01);
+}
+.main-list {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-bottom: 15rem;
+}
+.logo a {
+  text-decoration: none;
+}
+.main-list::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}

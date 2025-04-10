@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scheme</title>
+    <link rel="stylesheet" href="scheme.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">logo</div>
+      <div class="menu">
+        <div class="search-container">
+          <button class="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <input type="text" placeholder="Search..." class="search-input" />
+        </div>
+        <div class="language-selector">
+          <i class="fas fa-language"></i>
+          <select>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </div>
+        <div class="help-section">
+          <div class="help"><i class="fas fa-question-circle"></i> Help</div>
+        </div>
+        <div class="login-section">
+          <div class="login"><i class="fas fa-user"></i> Sign-in</div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-3">
+          <div
+            id="simple-list-example"
+            class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center"
+          >
+            <a class="p-1 rounded" href="#simple-list-item-1">Details</a>
+            <a class="p-1 rounded" href="#simple-list-item-2">Benefits</a>
+            <a class="p-1 rounded" href="#simple-list-item-3">Eligibility</a>
+            <a class="p-1 rounded" href="#simple-list-item-4">Exclusions</a>
+            <a class="p-1 rounded" href="#simple-list-item-5"
+              >Application Process</a
+            >
+            <a class="p-1 rounded" href="#simple-list-item-6"
+              >Documents Required</a
+            >
+            <a class="p-1 rounded" href="#simple-list-item-7"
+              >Frequently Asked Questions</a
+            >
+            <a class="p-1 rounded" href="#simple-list-item-8"
+              >Sources And References</a
+            >
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="title"><h3>Jagananna Chedodu</h3></div>
+          <div class="sub-title">Andhra Pradesh</div>
+          <div
+            data-bs-spy="scroll"
+            data-bs-target="#simple-list-example"
+            data-bs-offset="0"
+            data-bs-smooth-scroll="true"
+            class="scrollspy-example"
+            tabindex="0"
+          >
+            <h4 id="simple-list-item-1">Details</h4>
+            <p>
+              "Jagananna Chedodu" is a State-Funded Social Welfare Scheme by the
+              B.C. Welfare Department, Govt. of Andhra Pradesh. The scheme is
+              only for tailors (All communities), Rajakas (washermen), and Nayee
+              Brahmins (Barbers) of the state. The beneficiary will be provided
+              a one-time amount of ₹ 10,000 per year for a period of 5 years
+              i.e., ₹ 50,000/- in five installments. This fund can be utilized
+              by the beneficiaries for purchasing tools, equipment, and other
+              essentials to grow their source of income and work establishment.
+              The Functionary Responsible for Scheme Delivery is/are Welfare &
+              Education & Assistant / Ward Welfare & Development Secretary at
+              Village/Ward secretariats level. At the district level, the
+              Executive Director, of BC Corporation will coordinate with the
+              assistance of MPDOs / Municipal Commissioner.
+            </p>
+            <h4 id="simple-list-item-2">Benefits</h4>
+            <ul>
+              <li>
+                The beneficiary will be provided a one-time amount of ₹ 10,000
+                per year for a period of 5 years i.e., ₹ 50,000/- in five
+                installments.
+              </li>
+              <li>
+                This fund can be utilized by the beneficiaries for purchasing
+                tools, equipment, and other essentials to grow their source of
+                income and work establishment.
+              </li>
+            </ul>
+            <h4 id="simple-list-item-3">Eligibility</h4>
+            <ul>
+              <li>
+                The total family annual income should be less than or equal to ₹
+                2,50,000.
+              </li>
+              <li>
+                The Total Family Land holding of the applicant should be wetland
+                below 10 acres/ dry land below 25 acres/ or wetland and dry land
+                under 25 acres.
+              </li>
+              <li>
+                No family member should be a government employee or Government
+                pensioner. The families of Sanitary workers are exempted.
+              </li>
+              <li>
+                The students must have availed admission in the
+                colleges/universities or institutes recognized in one of the
+                following (regular) courses - B.Tech, B.Pharmacy, ITI,
+                Polytechnic, B.Ed, M.Tech, M.Pharmacy, MBA, Other Degree/PG
+                Courses. * For PG Courses only Government/University Colleges
+                are eligible.
+              </li>
+              <li>
+                The students should be enrolled in one of the following
+                institutions - Government or Government Aided; Private Colleges
+                affiliated with State Universities / Boards; Day scholar
+                students; Students in College Attached Hostels (CAH) and
+                Department Attached Hostels (DAH)
+              </li>
+              <li>The aggregate attendance of the applicant should be 75%.</li>
+              <li>
+                No member of the family should own a four-wheeler (Taxis /
+                Tractors/ Autos are exempted).
+              </li>
+              <li>
+                The family of the applicant should not own any property or
+                should own property less than 1500 sq. ft. of built-up area
+                (Residential or Commercial) in urban areas.
+              </li>
+              <li>No family member should be an income tax payee.</li>
+              <li>
+                Both Male & Female, Ages should be depending on the Eligible of
+                prescribed courses.
+              </li>
+              <li>
+                Students belonging to SC, ST, BC, EBC (other than Kapu), Kapu,
+                Minority, and Differently Abled categories are eligible.
+              </li>
+            </ul>
+            <h4 id="simple-list-item-4">Exclusions</h4>
+            <ul>
+              <li>
+                This scheme is not applicable to deemed and private varsities
+                (Except for Government Quota).
+              </li>
+              <li>
+                The scheme is not applicable to students studying through
+                distance learning and correspondence courses.
+              </li>
+              <li>
+                This scheme is not applicable to the student belonging to
+                management and NRI quotas.
+              </li>
+            </ul>
+            <h4 id="simple-list-item-5">Application Process</h4>
+            <ol>
+              <li>
+                On Citizen Schemes Portal landing page, the citizen can log in
+                using the Aadhaar-tagged mobile OTP Authentication. In the
+                “Citizen Scheme Application” page, citizens can select
+                “Jagananna Chedodu” from the schemes dropdown and click on
+                “Submit”.
+              </li>
+              <li>
+                Applications submitted are forwarded to Welfare and Education
+                Assistant (WEA) /Ward Welfare and Development Secretary (WWDS).
+              </li>
+              <li>
+                The Volunteers / WEAs / WWDS conducts the field verification for
+                each application, takes eKYC, makes a relevant recommendation,
+                and forwards it to Mandal Parishad Development Officer (MPDO) /
+                Municipal Commissioner (MC).
+              </li>
+              <li>
+                The MPDO/MC reviews the application and makes relevant
+                recommendations and forwards the application to the Executive
+                Directors of the Backward Classes Welfare Department (ED BC).
+              </li>
+              <li>
+                The Executive Director of the Backward Classes Corporations (ED
+                BCs) verifies the application and makes relevant
+                recommendations.
+              </li>
+              <li>
+                Based on recommendations made by the ED BCs and the applicants’
+                eligibility as mentioned in the Scheme Eligibility Calculator,
+                the Social Audit lists namely the Provisional eligible list and
+                Reverification list (with reasons for ineligibility) are
+                published in all secretariats.
+              </li>
+              <li>
+                The citizens in the Reverification list can raise a grievance if
+                they think that the reason mentioned for ineligibility is
+                incorrect.
+              </li>
+              <li>
+                The final list of Eligible and Ineligible Beneficiaries is
+                published in all secretariats.
+              </li>
+              <li>
+                The citizens mentioned in the Final Ineligible list can raise a
+                grievance in Citizen Schemes Portal if he/she thinks that the
+                reason for rejection is incorrect.
+              </li>
+              <li>
+                The scheme benefit is disbursed to all eligible beneficiaries
+                through Aadhaar Enabled Payment System (AEPS). The
+                acknowledgment of receipt of the payment by the beneficiary is
+                done by the Volunteers / WEAs / WWDS using eKYC (Biometric
+                Authentication).
+              </li>
+              <li>
+                The beneficiaries can track the status of their payment on the
+                Citizen Schemes Portal landing page by clicking on “Track
+                Application Status”.
+              </li>
+            </ol>
+            <h4 id="simple-list-item-6">Documents Required</h4>
+            <ul>
+              <li>Aadhaar Card</li>
+              <li>Rice Card / Income certificate</li>
+              <li>College admission particulars</li>
+              <li>Parents details</li>
+              <li>Parents details</li>
+              <li>
+                Non-taxpayer declaration / No Four-Wheeler / No Urban Property
+                beyond 1500 Square feet / No agriculture land beyond the
+                prescribed limit.
+              </li>
+            </ul>
+            <h4 id="simple-list-item-7">Frequently Asked Questions</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              asperiores, doloribus beatae quaerat in molestiae sequi rerum.
+              Consectetur illum maiores ab architecto natus iure, expedita
+              doloribus, modi nesciunt aliquid nihil! Officiis beatae sequi,
+              vero eum suscipit inventore animi, id earum natus quos est
+              repellat labore facilis aperiam quis ab cum fuga minima vel maxime
+              numquam. Velit harum molestiae iusto vero. Reiciendis quae itaque
+              totam molestiae possimus illum in commodi minus eveniet, libero
+              amet dolorum, beatae iusto earum velit! Quod ratione distinctio
+              numquam, itaque voluptas eum facere odio rerum amet voluptates!
+            </p>
+            <h4 id="simple-list-item-8">Sources And References</h4>
+            <ul class="list-group list-group-">
+              <li class="list-group-item"><a>Guidelines</a></li>
+              <li class="list-group-item">
+                <a>Standard Operating Procedure (SOP)</a>
+              </li>
+              <li class="list-group-item"><a>Timeline</a></li>
+              <li class="list-group-item">
+                <a
+                  >Scheme Description As On The Navasakam Beneficiary Management
+                  Portal</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="result-box">
+          <div class="upper-box">
+            <div class="icon">
+              <i class="fa-regular fa-bookmark"></i>
+              <i class="fa-regular fa-calendar"></i>
+            </div>
+            <button type="button" class="btn btn-outline-primary">
+              <i class="fa-solid fa-share"></i>Share
+            </button>
+          </div>
+          <div class="conclusion"><a>Not Eligible</a></div>
+          <div class="recommendation">
+            <h5>AI Recommendations</h5>
+            <div class="ai-box">
+              <div class="state-container">
+                <div class="flex-container">
+                  <div class="image-wrapper">
+                    <img
+                      alt="Karnataka"
+                      title="Karnataka"
+                      src="https://cdn.myscheme.in/images/states/logos/color/Karnataka.svg"
+                      class="state-image"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="state-info">
+                    <h2 class="state-title">Karnataka</h2>
+
+                    <div class="state-numbers">
+                      <span class="state-number">
+                        <span class="number">59</span>
+                        <span class="label">State</span>
+                      </span>
+
+                      <span class="state-number">
+                        <span class="number">506</span>
+                        <span class="label">Central</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="state-container">
+                <div class="flex-container">
+                  <div class="image-wrapper">
+                    <img
+                      alt="Karnataka"
+                      title="Karnataka"
+                      src="https://cdn.myscheme.in/images/states/logos/color/Karnataka.svg"
+                      class="state-image"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="state-info">
+                    <h2 class="state-title">Karnataka</h2>
+
+                    <div class="state-numbers">
+                      <span class="state-number">
+                        <span class="number">59</span>
+                        <span class="label">State</span>
+                      </span>
+
+                      <span class="state-number">
+                        <span class="number">506</span>
+                        <span class="label">Central</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="state-container">
+                <div class="flex-container">
+                  <div class="image-wrapper">
+                    <img
+                      alt="Karnataka"
+                      title="Karnataka"
+                      src="https://cdn.myscheme.in/images/states/logos/color/Karnataka.svg"
+                      class="state-image"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div class="state-info">
+                    <h2 class="state-title">Karnataka</h2>
+
+                    <div class="state-numbers">
+                      <span class="state-number">
+                        <span class="number">59</span>
+                        <span class="label">State</span>
+                      </span>
+
+                      <span class="state-number">
+                        <span class="number">506</span>
+                        <span class="label">Central</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cloud cloud-small"></div>
+    <div class="cloud cloud-medium"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-large"></div>
+
+    <div class="sun-moon" id="sunMoon"></div>
+
+    <button class="button" id="toggleButton">🌙 Dark Mode</button>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    >
+      const toggleButton = document.getElementById("toggleButton");
+      const body = document.body;
+      const sunMoon = document.getElementById("sunMoon");
+
+      toggleButton.addEventListener("click", () => {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+          toggleButton.textContent = "☀️ Light Mode";
+          if (!sunMoon.querySelector(".moon-shadow")) {
+            const shadow = document.createElement("div");
+            shadow.classList.add("moon-shadow");
+            sunMoon.appendChild(shadow);
+          }
+        } else {
+          toggleButton.textContent = "🌙 Dark Mode";
+          const shadow = sunMoon.querySelector(".moon-shadow");
+          if (shadow) shadow.remove();
+        }
+      });
+
+      document.querySelectorAll('#nav-tab>[data-bs-toggle="tab"]').forEach(el => {
+              el.addEventListener('shown.bs.tab', () => {
+                const target = el.getAttribute('data-bs-target')
+                const scrollElem = document.querySelector(`${target} [data-bs-spy="scroll"]`)
+                bootstrap.ScrollSpy.getOrCreateInstance(scrollElem).refresh()
+              })
+            })
+    </script>
+  </body>
+</html>

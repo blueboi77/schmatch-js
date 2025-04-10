@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligibility Checker</title>
+    <link rel="stylesheet" href="style-eligibility.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Eligibility Checker</h1>
+            <p>Answer a few questions to find government schemes you qualify for!</p>
+        </header>
+        
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <!-- Interactive Questionnaire -->
+        <div id="questionnaire">
+            <form id="question-form">
+                <div class="question" id="question-1">
+                    <label>What is your annual income?</label>
+                    <select id="income" required>
+                        <option value="" disabled selected>Select your income range</option>
+                        <option value="low">Below ₹1,00,000</option>
+                        <option value="mid">₹1,00,000 - ₹5,00,000</option>
+                        <option value="high">Above ₹5,00,000</option>
+                    </select>
+                </div>
+
+                <div class="question" id="question-2">
+                    <label>What is your age?</label>
+                    <input type="number" id="age" min="1" max="120" placeholder="Enter your age" required>
+                </div>
+
+                <div class="question" id="question-3">
+                    <label>What is your marital status?</label>
+                    <select id="marital-status" required>
+                        <option value="" disabled selected>Select your status</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                    </select>
+                </div>
+
+                <button type="button" id="next-question">Next</button>
+            </form>
+        </div>
+
+        <!-- Results Display -->
+        <div id="results" class="hidden">
+            <h2>Eligible Schemes</h2>
+            <div id="scheme-list"></div>
+            <button id="restart">Start Over</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
