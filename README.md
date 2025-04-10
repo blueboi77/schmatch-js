@@ -11,11 +11,15 @@ mongodb
 
 how to run:
 
->>open directory
->>run "node init\index.js"
->>>>this will initialize the db
->>run "node app.js"
->>in browser open "localhost:8080"
+>open directory
+
+>run "node init\index.js"
+
+>>this will initialize the db<
+
+>run "node app.js"
+
+>in browser open "localhost:8080"
 
 
 
